@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DB Hotel</title>
+</head>
+<body>
+<div id="root">
+  <table>
+    <thead>
+      <tr>
+        <th>
+          id
+        </th>
+        <th>
+          room_number
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr v-for="hotel in rooms" @click="roomDetails(hotel.id)">
+        <td>{{hotel.id}}</td>
+        <td>{{hotel.room_number}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div>
+    <table>
+      <thead>
+        <tr>
+          <th>
+            id
+          </th>
+          <th>
+            room_number
+          </th>
+          <th>
+            floor
+          </th>
+          <th>
+            beds
+          </th>
+          <th>
+            created_at
+          </th>
+          <th>
+            updated_at
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{room.id}}</td>
+          <td>{{room.room_number}}</td>
+          <td>{{room.floor}}</td>
+          <td>{{room.beds}}</td>
+          <td>{{room.created_at}}</td>
+          <td>{{room.updated_at}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <script src="./main.js" charset="utf-8"></script>
+</body>
+</html>
